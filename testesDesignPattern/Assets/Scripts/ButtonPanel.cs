@@ -1,17 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using ReflectionFactory;
 using UnityEngine;
-using SimpleFactory;
 
 public class ButtonPanel : MonoBehaviour
 {
-    public void Fire()
-    {
-        AbilityFactory.GetAbility("fire");
-        Debug.Log("APERTEI FOGO");
-    }
-    public void Heal()
-    {
-        AbilityFactory.GetAbility("heal");
-    }
+    //[SerializeField]
+    //private AbilityButton buttonPrefab;
+
+    //private void OnEnable()
+    //{
+    //    foreach(string name in AbilityFactory.GetAbilityNames2())
+    //    {
+    //        var button = Instantiate(buttonPrefab);
+    //        button.gameObject.name = name + " Button";
+    //        button.SetAbilityName(name);
+    //        button.transform.SetParent(transform);
+    //    }
+    //}
 }
