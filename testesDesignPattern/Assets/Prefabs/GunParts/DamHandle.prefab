@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1205842174893365911}
   - component: {fileID: 1205842174893365905}
   m_Layer: 0
-  m_Name: Handle
+  m_Name: DamHandle
   m_TagString: Handle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -8781582721970812450, guid: 35dd010e8fde60748826f026b02128f4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e0b215e6ebe864e987562e13087b7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
-  speed: 3
-  knockback: 10
-  durability: 5
+  damage: 5
+  speed: -3
+  knockback: 6
+  durability: 3

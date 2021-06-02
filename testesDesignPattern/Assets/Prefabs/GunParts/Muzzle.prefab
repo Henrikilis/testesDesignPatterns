@@ -98,4 +98,4 @@ MonoBehaviour:
   damage: 10
   speed: 3
   knockback: 3
-  durability: 0
+  durability: 5
