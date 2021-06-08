@@ -11,7 +11,19 @@ public abstract class Spell
     public abstract void Process();
 
     public float cooldownTime;
-    private float currentTime;
+    public bool timerActive;
+
+    void Update()
+    {
+        if (timerActive)
+        {
+            cooldownTime -= Time.deltaTime;
+            if (cooldownTime <= 0)
+            {
+                timerActive = false;
+            }
+        }
+    }
 }
 
 public static class SpellFactory

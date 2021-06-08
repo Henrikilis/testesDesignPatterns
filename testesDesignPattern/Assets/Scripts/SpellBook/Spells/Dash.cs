@@ -9,5 +9,7 @@ public class Dash : Spell
     public override void Process()
     {
         Debug.Log("FIZ DASH");
+        cooldownTime = 3;
+        timerActive = true;
     }
 }
