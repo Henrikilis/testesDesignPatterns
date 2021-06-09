@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System.Reflection;
 using System;
+//using System.Diagnostics;
 
 public abstract class Spell
 {
@@ -12,23 +13,11 @@ public abstract class Spell
 
     public float cooldownTime;
     public bool timerActive;
-
-    void Update()
-    {
-        if (timerActive)
-        {
-            cooldownTime -= Time.deltaTime;
-            if (cooldownTime <= 0)
-            {
-                timerActive = false;
-            }
-        }
-    }
 }
 
 public static class SpellFactory
 {
-    private static Dictionary<string, Type> spellsByName;
+    public static Dictionary<string, Type> spellsByName;
     private static bool IsInitialized => spellsByName != null;
 
     private static void InitializeFactory()
@@ -49,7 +38,7 @@ public static class SpellFactory
         }
     }
 
-    private static Spell GetSpell(string spellType)
+    public static Spell GetSpell(string spellType)
     {
         InitializeFactory();
 

@@ -16,6 +16,7 @@ public class SpellHud : MonoBehaviour
             button.gameObject.name = name + " Button";
             button.SetSpellName(name);
             button.transform.SetParent(transform);
+            button.button.onClick.AddListener(delegate { SpellFactory.GetSpell(name).Process(); });
         }
     }
 }
