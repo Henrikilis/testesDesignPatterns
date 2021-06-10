@@ -4,15 +4,15 @@ using UnityEngine;
 using System.Linq;
 using System.Reflection;
 using System;
-//using System.Diagnostics;
+using UnityEngine.UI;
 
 public abstract class Spell
 {
     public abstract string Name { get; }
     public abstract void Process();
-
-    public float cooldownTime;
-    public bool timerActive;
+    public float coolTime;
+    public GameObject cooldown;
+    public GameObject ui;
 }
 
 public static class SpellFactory
